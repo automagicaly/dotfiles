@@ -1,0 +1,29 @@
+[user]
+	email = renan.lord.de.aguiar@gmail.com
+	name = Renan Lordello de Aguiar
+[alias]
+	s = status
+	st = status --untracked-files=no
+	l = log --all --graph --oneline --decorate
+	ll = log --graph --oneline --decorate
+[core]
+	pager = delta
+	excludesfile = /home/renan/.config/git/ignore
+[delta]
+    navigate = true
+    light = false
+    line-numbers = true
+[diff]
+    colorMoved = default
+[interactive]
+    diffFilter=delta --color-only
+[merge]
+    conflictstyle = diff3
+[merge "ours"]
+	driver = true
+[merge "theirs"]
+	driver = true
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = main

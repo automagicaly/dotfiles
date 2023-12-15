@@ -1,0 +1,5 @@
+# pyright
+pyrightconfig.json
+
+# direnv
+.envrc

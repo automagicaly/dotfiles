@@ -1,0 +1,7 @@
+google-chrome &
+slack &
+1password &
+polkit-dumb-agent &
+kitty -o shell tmux &
+xcompmgr -c -l0 -t0 -r0 -o.00 &
+exec awesome

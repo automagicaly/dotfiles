@@ -1,0 +1,20 @@
+{
+    "workspace.library": [
+        "/home/renan/.config/nvim",
+        "/home/renan/.local/share/nvim/site",
+        "/home/renan/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+        "/home/renan/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+        "/home/renan/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+        "/home/renan/.local/share/nvim/site/pack/packer/start/mason.nvim",
+        "/home/renan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+        "/home/renan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+        "/home/renan/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+        "/home/renan/.local/share/nvim/site/pack/packer/start/packer.nvim",
+        "/home/renan/.local/share/nvim/site/pack/packer/start/tender.vim",
+        "/tmp/.mount_nvimd235gU/usr/share/nvim/runtime",
+        "/tmp/.mount_nvimd235gU/usr/share/nvim/runtime/pack/dist/opt/matchit",
+        "/tmp/.mount_nvimd235gU/usr/lib/nvim",
+        "/home/renan/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp/after",
+        "${3rd}/luassert/library"
+    ]
+}
