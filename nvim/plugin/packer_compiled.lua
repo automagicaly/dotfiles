@@ -82,7 +82,7 @@ _G.packer_plugins = {
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["barbecue.nvim"] = {
-    config = { "\27LJ\2\n�\2\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nkinds\1\0\26\14Namespace\t \bKey\6*\14Interface\6*\rFunction\b\tFile\t \nField\6*\nEvent\6*\15EnumMember\6*\tEnum\6*\16Constructor\6*\rConstant\6*\nClass\6*\fBoolean\6*\nArray\6*\rVariable\6*\18TypeParameter\6*\vStruct\6*\vString\6*\rProperty\6*\fPackage\6*\rOperator\6*\vObject\6*\vNumber\6*\tNull\6*\vModule\6*\vMethod\b\fsymbols\1\0\0\1\0\1\14separator\6/\nsetup\rbarbecue\frequire\0" },
+    config = { "\27LJ\2\n�\3\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nkinds\1\0\26\tFile\b\rVariable\b\vObject\b\rFunction\t󰊕\18TypeParameter\b\14Interface\b\14Namespace\b\tEnum\b\16Constructor\b\rOperator\b\nField\b\nEvent\b\rProperty\b\vStruct\t󰙅\vMethod\b\15EnumMember\b\nClass\b\tNull\b\fPackage\b\bKey\t󰌋\vModule\b\nArray\t󰅪\fBoolean\b\vNumber\b\vString\b\rConstant\t󰏿\fsymbols\1\0\0\1\0\1\14separator\t󰿟\nsetup\rbarbecue\frequire\0" },
     loaded = true,
     path = "/home/renan/.local/share/nvim/site/pack/packer/start/barbecue.nvim",
     url = "https://github.com/utilyre/barbecue.nvim"
@@ -128,12 +128,6 @@ _G.packer_plugins = {
     path = "/home/renan/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["monokai-pro.nvim"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16monokai-pro\frequire\0" },
-    loaded = true,
-    path = "/home/renan/.local/share/nvim/site/pack/packer/start/monokai-pro.nvim",
-    url = "https://github.com/loctvl842/monokai-pro.nvim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/renan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -169,31 +163,27 @@ _G.packer_plugins = {
     path = "/home/renan/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["oxocarbon.nvim"] = {
+    loaded = true,
+    path = "/home/renan/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
+    url = "https://github.com/nyoom-engineering/oxocarbon.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/renan/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  ["tender.vim"] = {
-    loaded = true,
-    path = "/home/renan/.local/share/nvim/site/pack/packer/start/tender.vim",
-    url = "https://github.com/jacoborus/tender.vim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: monokai-pro.nvim
-time([[Config for monokai-pro.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16monokai-pro\frequire\0", "config", "monokai-pro.nvim")
-time([[Config for monokai-pro.nvim]], false)
+-- Config for: barbecue.nvim
+time([[Config for barbecue.nvim]], true)
+try_loadstring("\27LJ\2\n�\3\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nkinds\1\0\26\tFile\b\rVariable\b\vObject\b\rFunction\t󰊕\18TypeParameter\b\14Interface\b\14Namespace\b\tEnum\b\16Constructor\b\rOperator\b\nField\b\nEvent\b\rProperty\b\vStruct\t󰙅\vMethod\b\15EnumMember\b\nClass\b\tNull\b\fPackage\b\bKey\t󰌋\vModule\b\nArray\t󰅪\fBoolean\b\vNumber\b\vString\b\rConstant\t󰏿\fsymbols\1\0\0\1\0\1\14separator\t󰿟\nsetup\rbarbecue\frequire\0", "config", "barbecue.nvim")
+time([[Config for barbecue.nvim]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
 try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
 time([[Config for indent-blankline.nvim]], false)
--- Config for: barbecue.nvim
-time([[Config for barbecue.nvim]], true)
-try_loadstring("\27LJ\2\n�\2\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nkinds\1\0\26\14Namespace\t \bKey\6*\14Interface\6*\rFunction\b\tFile\t \nField\6*\nEvent\6*\15EnumMember\6*\tEnum\6*\16Constructor\6*\rConstant\6*\nClass\6*\fBoolean\6*\nArray\6*\rVariable\6*\18TypeParameter\6*\vStruct\6*\vString\6*\rProperty\6*\fPackage\6*\rOperator\6*\vObject\6*\vNumber\6*\tNull\6*\vModule\6*\vMethod\b\fsymbols\1\0\0\1\0\1\14separator\6/\nsetup\rbarbecue\frequire\0", "config", "barbecue.nvim")
-time([[Config for barbecue.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-cmp ]]

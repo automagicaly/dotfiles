@@ -23,14 +23,8 @@ return require('packer').startup(function(use)
     use { 'wbthomason/packer.nvim' }
 
     -- color scheme
+    use { 'nyoom-engineering/oxocarbon.nvim' }
     use { 'ellisonleao/gruvbox.nvim' }
-    use { 'jacoborus/tender.vim' }
-    use {
-        "loctvl842/monokai-pro.nvim",
-        config = function()
-            require("monokai-pro").setup()
-        end
-    }
 
     -- LSP / Auto completion / Treesitter / Snippts / Spell check
     use {
@@ -73,35 +67,35 @@ return require('packer').startup(function(use)
             require("barbecue").setup({
                 --attach_navic = false,
                 symbols = {
-                    separator = "/",
+                    separator = "󰿟",
                 },
                 kinds = {
-                    Array = "*",
-                    Boolean = "*",
-                    Class = "*",
-                    Constant = "*",
-                    Constructor = "*",
-                    Enum = "*",
-                    EnumMember = "*",
-                    Event = "*",
-                    Field = "*",
-                    File = " ",
-                    Function = "",
-                    Interface = "*",
-                    Key = "*",
-                    Namespace = " ",
-                    Method = "",
-                    Module = "*",
-                    Null = "*",
-                    Number = "*",
-                    Object = "*",
-                    Operator = "*",
-                    Package = "*",
-                    Property = "*",
-                    String = "*",
-                    Struct = "*",
-                    TypeParameter = "*",
-                    Variable = "*",
+                    Array = "󰅪",
+                    Boolean = "",
+                    Class = "",
+                    Constant = "󰏿",
+                    Constructor = "",
+                    Enum = "",
+                    EnumMember = "",
+                    Event = "",
+                    Field = "",
+                    File = "",
+                    Function = "󰊕",
+                    Interface = "",
+                    Key = "󰌋",
+                    Method = "",
+                    Module = "",
+                    Null = "",
+                    Namespace = "",
+                    Number = "",
+                    Object = "",
+                    Operator = "",
+                    Package = "",
+                    Property = "",
+                    String = "",
+                    Struct = "󰙅",
+                    TypeParameter = "",
+                    Variable = "",
                 },
             })
         end,

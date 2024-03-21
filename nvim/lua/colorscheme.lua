@@ -1,7 +1,7 @@
 vim.g.termguicolors = true
 vim.g.background = 'dark'
 vim.g.syntax = 'off'
-vim.cmd.colorscheme('gruvbox')
+vim.cmd.colorscheme('oxocarbon')
 local hl_group = 'MatchParen'
 local hl = vim.api.nvim_get_hl_by_name(hl_group, true)
 hl['bold'] = true
