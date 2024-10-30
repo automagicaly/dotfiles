@@ -1,5 +1,5 @@
 local function mapkey(mapping, func, desc)
-    vim.keymap.set('n', '<leader>'..mapping, func, { noremap = true, silent = true, desc = desc})
+    vim.keymap.set('n', '<leader>' .. mapping, func, { noremap = true, silent = true, desc = desc })
 end
 
 navic = require('nvim-navic')
@@ -41,11 +41,11 @@ vim.api.nvim_create_autocmd(
                 })
             end
 
-            -- highlight on cursor hover 
+            -- highlight on cursor hover
             if client.server_capabilities.documentHighlightProvider then
                 local hl_options = {
                     bold = true,
-                    bg = 'LightYellow',
+                    bg = 'LightGreen',
                 }
                 vim.api.nvim_set_hl(0, 'LspReferenceRead', hl_options)
                 vim.api.nvim_set_hl(0, 'LspReferenceText', hl_options)
@@ -56,12 +56,12 @@ vim.api.nvim_create_autocmd(
                     group = augroup,
                 })
                 vim.api.nvim_create_autocmd('CursorHold', {
-                    callback = function ()
+                    callback = function()
                         vim.lsp.buf.document_highlight()
                     end
                 })
                 vim.api.nvim_create_autocmd('CursorMoved', {
-                    callback = function ()
+                    callback = function()
                         vim.lsp.buf.clear_references()
                     end
                 })
