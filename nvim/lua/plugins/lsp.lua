@@ -32,7 +32,74 @@ return {
         'hrsh7th/cmp-nvim-lsp-signature-help',
         'saadparwaiz1/cmp_luasnip',
         'f3fora/cmp-spell',
+    },
+    {
         'mfussenegger/nvim-dap',
+        config = function()
+            local function mapkey_base(key, func, desc)
+                vim.keymap.set(
+                    'n',
+                    key,
+                    func,
+                    {
+                        noremap = true,
+                        silent = true,
+                        desc = desc,
+                    }
+                )
+            end
+            local function mapkey(key, func, desc)
+                mapkey_base('leader' .. key, func, desc)
+            end
+            local dap = require('dap')
+            mapkey('!s', dap.continue, 'Start debugg session')
+            mapkey('!b', dap.toggle_breakpoint, 'Toggle break point')
+            mapkey('!r', dap.repl.open, 'Open REPL')
+            mapkey_base('<F9>', dap.continue, 'Step')
+            mapkey_base('<F10>', dap.continue, 'Step Into')
+            mapkey_base('<F11>', dap.continue, 'Step Out')
+            mapkey_base('<F12>', dap.continue, 'Run')
+        end
+    },
+    {
+        'rcarriga/nvim-dap-ui',
+        dependencies = {
+            'mfussenegger/nvim-dap',
+            'nvim-neotest/nvim-nio'
+        },
+        config = function()
+            local dap = require('dap')
+            local dapui = require('dapui')
+
+            dap.listeners.before.attach.dapui_config = function()
+                dapui.open()
+            end
+
+            dap.listeners.before.launch.dapui_config = function()
+                dapui.open()
+            end
+
+            dap.listeners.before.event_terminated.dapui_config = function()
+                dapui.close()
+            end
+
+            dap.listeners.before.event_exited.dapui_config = function()
+                dapui.close()
+            end
+        end,
+    },
+    {
+        'theHamsta/nvim-dap-virtual-text',
+        config = true,
+    },
+    {
+        'mfussenegger/nvim-dap-python',
+        dependencies = {
+            'mfussenegger/nvim-dap',
+        },
+        config = function()
+            require('dap-python').setup("python3")
+        end,
     },
     {
         'hrsh7th/nvim-cmp',
@@ -107,8 +174,8 @@ return {
                 'c',
                 'diff',
                 'go',
-                'java', 
-                'json', 
+                'java',
+                'json',
                 'lua',
                 'luadoc',
                 'markdown',
@@ -126,8 +193,8 @@ return {
             auto_install = true,
             modules = {},
             ignore_install = {},
-            incremental_selection = { enabled = false},
-            identation = { enabled = false},
+            incremental_selection = { enabled = false },
+            identation = { enabled = false },
             highlight = {
                 enable = true,
                 -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
