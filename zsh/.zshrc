@@ -2,7 +2,7 @@
 
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' matcher-list ''
-zstyle :compinstall filename '/home/renan/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -14,20 +14,39 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-# ASDF
-. "$HOME/.asdf/asdf.sh"
-
-# PROMPT
+##################################
+#             PROMPT             #
+##################################
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
 zstyle ':vcs_info:git:*' formats '%b '
 
 setopt PROMPT_SUBST
-PROMPT='%F{green}%n%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+PROMPT='%F{green}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 
-# XDG
+##################################
+#              XDG               #
+##################################
 export XDG_CONFIG_HOME="$HOME/.config"
 
-# PATH
-export PATH=/home/renan/.local/bin:/home/renan/.local/opt/zig:$PATH
+##################################
+#              PATH              #
+##################################
+export PATH=$HOME/.local/bin:$HOME/.local/opt/zig:/opt/homebrew/bin/:$HOME/Library/Python/3.10:$PATH
+
+##################################
+#              ASDF              #
+##################################
+. "$HOME/.asdf/asdf.sh"
+
+##################################
+#              NVM               #
+##################################
+ [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+##################################
+#             DIRENV             #
+##################################
+eval "$(direnv hook zsh)"
