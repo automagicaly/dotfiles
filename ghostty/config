@@ -1,0 +1,8 @@
+font-family = ""
+font-family = PragmataPro Mono Liga
+font-synthetic-style = true	
+font-feature = ss13
+font-size = 24
+window-inherit-font-size = false
+
+initial-command = zsh
