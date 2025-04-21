@@ -33,7 +33,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 ##################################
 #              PATH              #
 ##################################
-export PATH=$HOME/.local/bin:$HOME/.local/opt/zig:/opt/homebrew/bin/:$HOME/Library/Python/3.10:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/opt/go/bin:$HOME/.local/opt/zig:/opt/homebrew/bin/:$HOME/Library/Python/3.10:$PATH
 
 ##################################
 #              ASDF              #
