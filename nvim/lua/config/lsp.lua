@@ -3,6 +3,7 @@ local function mapkey(mapping, func, desc)
 end
 
 local navic = require('nvim-navic')
+local telescope = require('telescope.builtin')
 
 vim.api.nvim_create_autocmd(
     'LspAttach',
@@ -27,6 +28,10 @@ vim.api.nvim_create_autocmd(
             mapkey('el', vim.diagnostic.setloclist, 'Show errors on location list')
             mapkey('en', vim.diagnostic.goto_next, 'Go to the next error')
             mapkey('ep', vim.diagnostic.goto_prev, 'Go to the previous error')
+            mapkey('/b', telescope.buffers, 'Search inside buffers')
+            mapkey('/f', telescope.find_files, 'Find files')
+            mapkey('/g', telescope.live_grep, 'Live grep')
+            mapkey('/h', telescope.help_tags, 'Telescope help tags')
 
             -- Fromat on write
             if client.server_capabilities.documentFormattingProvider then
