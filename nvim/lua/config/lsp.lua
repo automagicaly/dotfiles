@@ -2,7 +2,7 @@ local function mapkey(mapping, func, desc)
     vim.keymap.set('n', '<leader>' .. mapping, func, { noremap = true, silent = true, desc = desc })
 end
 
-navic = require('nvim-navic')
+local navic = require('nvim-navic')
 
 vim.api.nvim_create_autocmd(
     'LspAttach',
@@ -14,6 +14,7 @@ vim.api.nvim_create_autocmd(
                 return
             end
 
+            mapkey('a', vim.lsp.buf.code_action, 'Code actions')
             mapkey('d', vim.lsp.buf.definition, 'Go to definition')
             mapkey('D', vim.lsp.buf.declaration, 'Go to declaration')
             mapkey('h', vim.lsp.buf.hover, 'Hover')
