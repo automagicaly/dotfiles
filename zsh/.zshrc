@@ -31,22 +31,26 @@ PROMPT='%F{green}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 export XDG_CONFIG_HOME="$HOME/.config"
 
 ##################################
-#              PATH              #
-##################################
-export PATH=$HOME/.local/bin:$HOME/.local/opt/go/bin:$HOME/.local/opt/zig:/opt/homebrew/bin/:$HOME/Library/Python/3.10:$PATH
-
-##################################
 #              ASDF              #
 ##################################
-. "$HOME/.asdf/asdf.sh"
+export ASDF_DATA_DIR="$HOME/.local/share/asdf"
 
 ##################################
-#              NVM               #
+#              PATH              #
 ##################################
- [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export PATH=$HOME/.local/bin:$ASDF_DATA_DIR/shims:$HOME/.local/opt/go/bin:$HOME/.local/opt/zig:/opt/homebrew/bin/:$HOME/Library/Python/3.10:$PATH
 
 ##################################
 #             DIRENV             #
 ##################################
 eval "$(direnv hook zsh)"
+
+##################################
+#            ALIASES             #
+##################################
+alias ls="exa"
+
+##################################
+#          COMPLETIONS           #
+##################################
+eval "$(asdf completion zsh)"
