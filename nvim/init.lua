@@ -1,6 +1,7 @@
-vim.opt_local.path:prepend(vim.fn.stdpath('config')..'/lua')
+vim.opt_local.path:prepend(vim.fn.stdpath('config') .. '/lua')
 require('config/general')
 require('config/lazy')
 require('config/theme')
 require('config/lsp')
+require('config/dap')
 require('config/languages')
