@@ -36,9 +36,22 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export ASDF_DATA_DIR="$HOME/.local/share/asdf"
 
 ##################################
+#               GO               #
+##################################
+export GOPATH=$HOME/.local/share/go
+export GOBIN=$GOPATH/bin
+
+##################################
 #              PATH              #
 ##################################
-export PATH=$HOME/.local/bin:$ASDF_DATA_DIR/shims:$HOME/.local/opt/go/bin:$HOME/.local/opt/zig:/opt/homebrew/bin/:$HOME/Library/Python/3.10:$PATH
+MY_PATH=""
+MY_PATH=$MY_PATH:$HOME/.local/bin
+MY_PATH=$MY_PATH:$ASDF_DATA_DIR/shims
+MY_PATH=$MY_PATH:$GOBIN
+MY_PATH=$MY_PATH:/opt/homebrew/bin/
+export PATH=$MY_PATH:$PATH
+
+#export PATH=$HOME/.local/bin:$ASDF_DATA_DIR/shims:$GOBIN:$HOME/.local/opt/go/bin:$HOME/.local/opt/zig:/opt/homebrew/bin/:$HOME/Library/Python/3.10:$PATH
 
 ##################################
 #             DIRENV             #
