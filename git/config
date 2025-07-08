@@ -1,6 +1,9 @@
-[user]
-	email = renan.lord.de.aguiar@gmail.com
-	name = Renan Lordello de Aguiar
+[includeIf "gitdir:/Users/bytedance/"]
+    path = ~/.config/git/bytedance
+[includeIf "gitdir:/home/renan/"]
+    path = ~/.config/git/personal
+[includeIf "gitdir:dotfiles/"]
+    path = ~/.config/git/personal
 [alias]
 	s = status
 	st = status --untracked-files=no
@@ -8,7 +11,7 @@
 	ll = log --graph --oneline --decorate
 [core]
 	pager = delta
-	excludesfile = /home/renan/.config/git/ignore
+	excludesfile = ~/.config/git/ignore
 [delta]
     navigate = true
     light = false

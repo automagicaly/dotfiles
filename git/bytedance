@@ -1,0 +1,5 @@
+[user]
+	email = renan.lordello@bytedance.com
+	name = Renan Lordello
+[url "git@code.byted.org:"]
+	insteadOf = https://code.byted.org/
