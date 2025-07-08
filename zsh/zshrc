@@ -62,8 +62,14 @@ eval "$(direnv hook zsh)"
 #            ALIASES             #
 ##################################
 alias ls="eza"
+alias unlock='eval $(op signin)'
 
 ##################################
 #          COMPLETIONS           #
 ##################################
 eval "$(asdf completion zsh)"
+
+##################################
+#         CONFIGURATION          #
+##################################
+export EDITOR=nvim
